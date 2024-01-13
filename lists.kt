@@ -13,4 +13,8 @@ fun main() {
   for (planet in solarSystem) {
     println(planet)
   }
+
+  solarSystem[3] = "Future Moon"
+  println(solarSystem[3])
+  println(solarSystem[9])
 }
