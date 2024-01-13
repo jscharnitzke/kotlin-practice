@@ -12,6 +12,10 @@ data class Event(
 )
 
 class User(val events: MutableList<Event>) {
+  fun printLastEvent() {
+    println("Last event of the day: ${events.last().title}")
+  }
+
   fun summarizeDayPartEvents() {
     val groupedEvents = events.groupBy { it.daypart }
 
@@ -58,5 +62,5 @@ fun main() {
           )
       )
 
-  user.summarizeDayPartEvents()
+  user.printLastEvent()
 }
