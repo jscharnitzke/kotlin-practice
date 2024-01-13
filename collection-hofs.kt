@@ -13,7 +13,12 @@ val cookies =
 
 fun main() {
   // cookies.forEach { println("Menu item: ${it.name}") }
-  val fullMenu = cookies.map { "${it.name} - $${it.price}" }
 
-  fullMenu.forEach { println(it) }
+  // val fullMenu = cookies.map { "${it.name} - $${it.price}" }
+  // fullMenu.forEach { println(it) }
+
+  val softBakedMenu = cookies.filter { it.softBaked }
+
+  println("Soft cookies:")
+  softBakedMenu.forEach { println("${it.name} - $${it.price}") }
 }
