@@ -12,6 +12,12 @@ data class Event(
 )
 
 class User(val events: MutableList<Event>) {
+  fun summarizeDayPartEvents() {
+    val groupedEvents = events.groupBy { it.daypart }
+
+    groupedEvents.forEach { (daypart, events) -> println("$daypart: ${events.size} events") }
+  }
+
   fun summarizeShortEvents() {
     val shortEvents = events.filter { it.durationInMinutes < 60 }
     println("You have ${shortEvents.size} short events.")
@@ -52,5 +58,5 @@ fun main() {
           )
       )
 
-  user.summarizeShortEvents()
+  user.summarizeDayPartEvents()
 }
