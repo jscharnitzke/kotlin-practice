@@ -37,6 +37,27 @@ class Quiz : ProgressPrintable {
         println()
         println(progressText)
     }
+
+    public fun printQuiz() {
+        question1.let {
+            println(it.questionText)
+            println(it.answer)
+            println(it.difficulty)
+        }
+        println()
+        question2.let {
+            println(it.questionText)
+            println(it.answer)
+            println(it.difficulty)
+        }
+        println()
+        question3.let {
+            println(it.questionText)
+            println(it.answer)
+            println(it.difficulty)
+        }
+        println()
+    }
 }
 
 // extend a class with a property; can customize getters and setters
@@ -54,5 +75,6 @@ class Quiz : ProgressPrintable {
 // }
 
 fun main() {
-    Quiz().printProgressBar()
+    val quiz = Quiz()
+    quiz.printQuiz()
 }
