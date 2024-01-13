@@ -11,6 +11,11 @@ data class Event(
     val durationInMinutes: Int
 )
 
+val Event.durationOfEvent: String
+  get() {
+    return if (durationInMinutes < 60) "short" else "long"
+  }
+
 class User(val events: MutableList<Event>) {
   fun printLastEvent() {
     println("Last event of the day: ${events.last().title}")
@@ -62,5 +67,5 @@ fun main() {
           )
       )
 
-  user.printLastEvent()
+  println("Duration of first event of the day: ${user.events[0].durationOfEvent}")
 }
