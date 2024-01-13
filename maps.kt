@@ -20,4 +20,7 @@ fun main() {
 
   solarSystem.remove("Pluto")
   println(solarSystem.size)
+
+  solarSystem["Jupiter"] = 78 // solarSystem.put("Jupiter", 78)
+  println(solarSystem["Jupiter"])
 }
