@@ -38,7 +38,8 @@ class Quiz : ProgressPrintable {
         println(progressText)
     }
 
-    public fun printQuiz() {
+    fun printQuiz() {
+        // let is a scoped function where the scope is any object
         question1.let {
             println(it.questionText)
             println(it.answer)
@@ -75,6 +76,6 @@ class Quiz : ProgressPrintable {
 // }
 
 fun main() {
-    val quiz = Quiz()
-    quiz.printQuiz()
+    // apply is object scoped and returns a reference to the object
+    Quiz().apply { printQuiz() }
 }
