@@ -11,4 +11,6 @@ val cookies =
         Cookie("Sugar and Sprinkles", false, false, 1.39)
     )
 
-fun main() {}
+fun main() {
+  cookies.forEach { println("Menu item: $it") }
+}
