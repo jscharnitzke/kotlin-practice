@@ -2,7 +2,7 @@ class Cookie(val name: String, val softBaked: Boolean, val hasFilling: Boolean, 
 
 val cookies =
     listOf(
-        Cookie(name = "Chocolate Chip", softBaked = false, hasFilling = false, price = 1.69),
+        Cookie("Chocolate Chip", false, false, 1.69),
         Cookie("Banana Walnut", true, false, 1.49),
         Cookie("Vanilla Creme", false, true, 1.59),
         Cookie("Chocolate Peanut Butter", false, true, 1.49),
