@@ -32,6 +32,10 @@ fun main() {
   // println("Crunchy cookies:")
   // crunchyMenu.forEach { println("${it.name} - $${it.price}") }
 
-  val totalPrice = cookies.fold(0.0) { total, cookie -> total + cookie.price }
-  println("Total price: $$totalPrice")
+  // val totalPrice = cookies.fold(0.0) { total, cookie -> total + cookie.price }
+  // println("Total price: $$totalPrice")
+
+  val alphabeticalMenu = cookies.sortedBy { it.name }
+  println("Alphabetical menu:")
+  alphabeticalMenu.forEach { println(it.name) }
 }
