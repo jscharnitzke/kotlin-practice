@@ -6,9 +6,9 @@ enum class DayPart {
 
 data class Event(
     val title: String,
-    val description: String?,
+    val description: String? = null,
     val daypart: DayPart,
-    val duration: Int
+    val durationInMinutes: Int
 )
 
 fun main() {
