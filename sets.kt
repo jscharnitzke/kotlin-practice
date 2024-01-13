@@ -10,4 +10,8 @@ fun main() {
 
   solarSystem.add("Pluto")
   println(solarSystem.size)
+
+  solarSystem.remove("Pluto")
+  println(solarSystem.size)
+  println("Pluto" in solarSystem)
 }
